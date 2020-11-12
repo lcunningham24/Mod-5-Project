@@ -29,7 +29,7 @@ Fortunately my datasets were very clean so I was able to dive right into EDA.
 
 My **Final_Notebook.ipynb** includes my EDA, modeling and evaluation for my project. For my EDA I wanted to explore both my categorical and continuous features. 
 
-![Image]('/genres.png')
+![Image](/genres.png)
 
 I wanted to explore genres to get a better sense of what type of music is frequently on the weekly hot 100. As you can see above, there is an overwhelming amount of country, followed by rap and pop. There are several subgenres and genre mixtures so I decided to focus more on the audio features for the remainder of this project.
 
