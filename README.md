@@ -29,15 +29,38 @@ Fortunately my datasets were very clean so I was able to dive right into EDA.
 
 My **Final_Notebook.ipynb** includes my EDA, modeling and evaluation for my project. For my EDA I wanted to explore both my categorical and continuous features. 
 
-To get a general idea of what 
+![Image]('/genres.png')
 
+I wanted to explore genres to get a better sense of what type of music is frequently on the weekly hot 100. As you can see above, there is an overwhelming amount of country, followed by rap and pop. There are several subgenres and genre mixtures so I decided to focus more on the audio features for the remainder of this project.
+
+**Audio Features**
+
+![Image]('/audio_features.png')
+
+![Image]('/danceability.png')
+
+![Image]('/liveness.png')
+
+![Image]('/energy.png')
+
+![Image]('/tempo.png')
+
+**Balance of Classes**
+
+![Image]('/class_imbalance.png')
+
+As you can see from the above barplot, we have significant class imbalance in our dataset with the majority being outside our Top-10 class. This is important to note as we will need deal with this imbalance in our models.
 
 ## Modeling 
 
 I chose to use an F1 score as the metric to evaluate my models. An F1 score measures a model's accuracy on a particular dataset. It is the "harmonic mean" of precision and recall and is useful when false positives and false negatives are more important. By finding a balance between precision and recall, it is particularly useful when the distribution of our classes are imbalanced. In the context of this project, we have significant class imbalance, therefore an F1 score seemed most appropriate. 
 
-For modeling, I 
-
+For modeling, I started with a baseline Dummy Classifier model and got an F1 score of 0.0. The Dummy Classifier was predicting everything as being outside of the Top-10 class, this is due to our class imbalance. To preprocess my data, I used a standard scalar and SMOTE to combat this class imbalance. My Random Forest model ending up being my best model with an F1 score of 0.60. 
 
 
 ## Conclusions 
+
+Using the random forest model, we can predict whether a song will break into the top 10 on the hot 100 charts on the basis of certain audio features - with danceability, energy, tempo and valence being the most important to our model. 
+
+This model is valuable to managers, producers and artists as it can help new and existing artists in the industry make their way up the billboard charts. 
+
