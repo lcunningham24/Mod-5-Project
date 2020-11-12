@@ -55,7 +55,7 @@ As you can see from the above barplot, we have significant class imbalance in ou
 
 I chose to use an F1 score as the metric to evaluate my models. An F1 score measures a model's accuracy on a particular dataset. It is the "harmonic mean" of precision and recall and is useful when false positives and false negatives are more important. By finding a balance between precision and recall, it is particularly useful when the distribution of our classes are imbalanced. In the context of this project, we have significant class imbalance, therefore an F1 score seemed most appropriate. 
 
-For modeling, I started with a baseline Dummy Classifier model and got an F1 score of 0.0. The Dummy Classifier was predicting everything as being outside of the Top-10 class, this is due to our class imbalance. To preprocess my data, I used a standard scalar and SMOTE to combat this class imbalance. My Random Forest model ending up being my best model with an F1 score of 0.60. Looking at feature importance, danceability, duration, energy, tempo and valence seemed to be the most indicative for my model. 
+For modeling, I started with a baseline Dummy Classifier model and got an F1 score of 0.0. The Dummy Classifier was predicting everything as being outside of the Top-10 class, this is due to our class imbalance. To preprocess my data, I used a standard scalar and SMOTE to combat this class imbalance. My Random Forest model ending up being my best model with an F1 score of 0.60. Looking at feature importance, danceability, duration, energy, tempo and valence seemed to be the most indicative for my model. Comparing this with the coefficients of my logistic regression model, there is an overlap of important features with danceability, duration, energy and tempo having the highest coefficients/feature importance. 
 
 ## Conclusions 
 
@@ -63,3 +63,4 @@ Using the random forest model, we can predict whether a song will break into the
 
 This model is valuable to managers, producers and artists as it can help new and existing artists in the industry make their way up the billboard charts. 
 
+In the future, I would like to look into how if can predict billboard success for specific genres and subgenres. I would also like to incorporate more specific features about artists including social media presence, audience and user sentiments. 
